@@ -29,7 +29,7 @@ public class Pirotecnicos extends Atraccion {
         return ingreso;
     }
 
-    determinarMantenimiento(boolean materialPeligroso, int duracionMinutos) {
+    public boolean determinarMantenimiento(boolean materialPeligroso, int duracionMinutos) {
         boolean requiereMantenimiento = false;
 
         if (materialPeligroso || duracionMinutos > 60) {
@@ -37,5 +37,21 @@ public class Pirotecnicos extends Atraccion {
         }
 
         return requiereMantenimiento;
+    }
+
+    public String determinarRiesgo(boolean materialPeligroso, int duracionMinutos) {
+        String riesgo = null;
+
+        if (materialPeligroso) {
+            riesgo = "Alto";
+        } 
+        if (!materialPeligroso && duracionMinutos > 60) {
+            riesgo = "Medio";
+        } 
+        if (!materialPeligroso && duracionMinutos <= 60) {
+            riesgo = "Bajo";
+        }
+
+        return riesgo;
     }
 }
