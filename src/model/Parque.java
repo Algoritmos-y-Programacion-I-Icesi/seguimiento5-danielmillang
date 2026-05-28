@@ -83,8 +83,14 @@ public class Parque {
     /**
      *
      */
-    public double calcularIngresoTotalDiario() {
-        //Completar para cumplir con el requerimiento
+    public double calcularIngresoTotalDiario() 
+
+        double ingresoTotal = 0;
+            for (Atraccion atraccion : atracciones) {
+                ingresoTotal += atraccion.calcularIngresoDiario();
+            }
+    
+            return ingresoTotal;
         return 0;
     }
 
@@ -92,13 +98,17 @@ public class Parque {
      *
      */
     public void mostrarIngresosDiarios() {
-        //Completar para cumplir con el requerimiento
+        for (Atraccion atraccion : atracciones) {
+            System.out.println(ingresoTotal);
+        }
     }
 
     /**
      */
     public void generarReporteOperaciones() {
-        //Completar para cumplir con el requerimiento
+        for (Atraccion atraccion : atracciones) {
+            System.out.println(parque.toString());
+        }
     }
 
     public void mostrarAtraccionesClasifRiesgo(){
