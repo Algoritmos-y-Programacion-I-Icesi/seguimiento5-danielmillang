@@ -107,12 +107,14 @@ public class Parque {
      */
     public void generarReporteOperaciones() {
         for (Atraccion atraccion : atracciones) {
-            System.out.println(parque.toString());
+            System.out.println(atraccion.toString());
         }
     }
 
     public void mostrarAtraccionesClasifRiesgo(){
-        //Completar para cumplir con el requerimiento
+        for (Atraccion atraccion : atracciones) {
+            System.out.println(parque.toString());
+        }
     }
     public void generarReporteAlertasCapacidad(){
         //Completar para cumplir con el requerimiento

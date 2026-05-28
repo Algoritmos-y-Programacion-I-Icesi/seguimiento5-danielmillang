@@ -98,7 +98,9 @@ public class Interfaz {
         int estaciones       = leerEntero("Número de estaciones");
         boolean anteojos     = leerBooleano("Requiere anteojos? (s/n):");
 
-        //Completar para cumplir con el requerimiento
+        parque.agregarAtraccion(nombre, zona, capacidad, edadMinima, precio);
+        RealidadVirtual simulador = new RealidadVirtual(nombre, zona, capacidad, edadMinima, 0, precio, estaciones, anteojos, false);
+        parque.agregarSimuladorVirtual(simulador);
     }
 
     /**
@@ -114,7 +116,9 @@ public class Interfaz {
         int edadMaxima       = leerEntero("Edad máxima permitida (años): ");
         boolean supervision  = leerBooleano("Requiere supervisión personal? (s/n):");
 
-        //Completar para cumplir con el requerimiento
+        parque.agregarAtraccion(nombre, zona, capacidad, edadMinima, precio);
+        Infantiles infantil = new Infantiles(nombre, zona, capacidad, edadMinima, 0, precio, 0, false);
+        parque.agregarJuegoInfantil(infantil);
     }
 
     /**
@@ -131,7 +135,9 @@ public class Interfaz {
         boolean materialPeligroso    = leerBooleano("usa material peligroso? (s/n): ");
 
 
-        //Completar para cumplir con el requerimiento
+        parque.agregarAtraccion(nombre, zona, capacidad, edadMinima, precio);
+        Pirotecnicos pirotecnico = new Pirotecnicos(nombre, zona, capacidad, edadMinima, 0, precio, duracion, materialPeligroso);
+        parque.agregarEspectaculoPirotecnico(pirotecnico);
     }
 
     /**
